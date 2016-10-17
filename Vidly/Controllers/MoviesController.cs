@@ -17,8 +17,8 @@ namespace Vidly.Controllers
 
             var customers = new List<Customer>
             {
-                new Customer {Name = "Customer 1" },
-                new Customer {Name = "Customer 2" }
+                new Customer { Name = "customer 1" },
+                new Customer { Name = "customer 2" }
             };
 
             var viewModel = new RandomMovieViewModel
@@ -28,6 +28,8 @@ namespace Vidly.Controllers
             };
 
             return View(viewModel); //return a View
+            //return View(movie);
+
             //return Content("hello world!"); //return the content, similar to Laravel's return $request->all();
             //return HttpNotFound(); //return 404
             //return new EmptyResult(); //return empty page
@@ -35,38 +37,56 @@ namespace Vidly.Controllers
         }
 
         #region ActionResult with 1 param
-        public ActionResult Edit(int id)
-        {
-            //cannot use movieId as param even if that is the name of the arg b/c default param as specified in RouteConfig is {id}
-            //return Content(string.Format("id = {0}", movieId)); 
+        //public ActionResult Edit(int id)
+        //{
+        //    //cannot use movieId as param even if that is the name of the arg b/c default param as specified in RouteConfig is {id}
+        //    //return Content(string.Format("id = {0}", movieId)); 
 
-            //must use id as route param
-            return Content(string.Format("id = {0}", id));
-        }
+        //    //must use id as route param
+        //    return Content(string.Format("id = {0}", id));
+        //}
         #endregion
 
 
         #region ActionResult with nullable and optional params
-        public ActionResult Index(int? pageIndex, string sortBy)
-        {
-            if (!pageIndex.HasValue)
-                pageIndex = 1;
+        //public ActionResult Index(int? pageIndex, string sortBy)
+        //{
+        //    if (!pageIndex.HasValue)
+        //        pageIndex = 1;
 
-            if (String.IsNullOrWhiteSpace(sortBy))
-                sortBy = "Name";
+        //    if (String.IsNullOrWhiteSpace(sortBy))
+        //        sortBy = "Name";
 
-            return Content(string.Format("pageIndex = {0}, sortBy = {1}", pageIndex, sortBy));
-        }
+        //    return Content(string.Format("pageIndex = {0}, sortBy = {1}", pageIndex, sortBy));
+        //}
         #endregion
 
         #region GET: movies/released/{year}/{month} as defined in our custom MapRoute in RouteConfig
-        [Route("movies/released/{year:regex(\\d{4}):range(2012,2016)}/{month:regex(\\d{2}):range(1,12)}")] //attr route with constraints
-        public ActionResult ByReleaseDate(int year, int month)
-        {
-            return Content(month + "/" + year);
-        }
+        //[Route("movies/released/{year:regex(\\d{4}):range(2012,2016)}/{month:regex(\\d{2}):range(1,12)}")] //attr route with constraints
+        //public ActionResult ByReleaseDate(int year, int month)
+        //{
+        //    return Content(month + "/" + year);
+        //}
         #endregion
 
 
+        #region GET: movies/index
+        public ActionResult Index()
+        {
+            var movies = GetMovies();
+
+            return View(movies);
+        }
+        #endregion
+        
+        private IEnumerable<Movie> GetMovies()
+        {
+            return new List<Movie>
+            {
+                new Movie { Id = 1, Name = "Rent", Duration = 2 },
+                new Movie { Id = 2, Name = "Cats", Duration = 3 }
+            };
+        }
+        
     }
 }
