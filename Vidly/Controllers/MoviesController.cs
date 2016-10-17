@@ -13,11 +13,32 @@ namespace Vidly.Controllers
         public ActionResult Random()
         {
             var movie = new Movie() { Name = "Shrek!" };
-            //return View(movie); //return a View
+            return View(movie); //return a View
             //return Content("hello world!"); //return the content, similar to Laravel's return $request->all();
             //return HttpNotFound(); //return 404
             //return new EmptyResult(); //return empty page
-            return RedirectToAction("Index", "Home", new { page = 1, sortBy = "name" } ); //specify <ActionName, Controller, [{args to pass as URL query string}]> to redirect to
+            //return RedirectToAction("Index", "Home", new { page = 1, sortBy = "name" } ); //specify <ActionName, Controller, [{args to pass as URL query string}]> to redirect to
+        }
+
+        public ActionResult Edit(int id)
+        {
+            //cannot use movieId as param even if that is the name of the arg b/c default param as specified in RouteConfig is {id}
+            //return Content(string.Format("id = {0}", movieId)); 
+
+            //must use id as route param
+            return Content(string.Format("id = {0}", id));
+        }
+
+        //nullable and optional params
+        public ActionResult Index(int? pageIndex, string sortBy)
+        {
+            if (!pageIndex.HasValue)
+                pageIndex = 1;
+
+            if (String.IsNullOrWhiteSpace(sortBy))
+                sortBy = "Name";
+
+            return Content(string.Format("pageIndex = {0}, sortBy = {1}", pageIndex, sortBy));
         }
     }
 }
