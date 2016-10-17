@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
+using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
@@ -12,8 +13,21 @@ namespace Vidly.Controllers
         // GET: Movies/Random
         public ActionResult Random()
         {
-            var movie = new Movie() { Name = "Shrek!" };
-            return View(movie); //return a View
+            var movie = new Movie() { Name = "Shrek!", Id = 3, Duration = 1.5 };
+
+            var customers = new List<Customer>
+            {
+                new Customer {Name = "Customer 1" },
+                new Customer {Name = "Customer 2" }
+            };
+
+            var viewModel = new RandomMovieViewModel
+            {
+                Movie = movie,
+                Customers = customers
+            };
+
+            return View(viewModel); //return a View
             //return Content("hello world!"); //return the content, similar to Laravel's return $request->all();
             //return HttpNotFound(); //return 404
             //return new EmptyResult(); //return empty page
