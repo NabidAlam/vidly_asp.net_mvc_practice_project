@@ -46,10 +46,13 @@ namespace Vidly.Controllers
         #endregion
 
         #region GET: movies/released/{year}/{month} as defined in our custom MapRoute in RouteConfig
+        [Route("movies/released/{year:regex(\\d{4}):range(2012,2016)}/{month:regex(\\d{2}):range(1,12)}")] //attr route with constraints
         public ActionResult ByReleaseDate(int year, int month)
         {
             return Content(month + "/" + year);
         }
         #endregion
+
+
     }
 }
