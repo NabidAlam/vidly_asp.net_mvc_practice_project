@@ -20,6 +20,7 @@ namespace Vidly.Controllers
             //return RedirectToAction("Index", "Home", new { page = 1, sortBy = "name" } ); //specify <ActionName, Controller, [{args to pass as URL query string}]> to redirect to
         }
 
+        #region ActionResult with 1 param
         public ActionResult Edit(int id)
         {
             //cannot use movieId as param even if that is the name of the arg b/c default param as specified in RouteConfig is {id}
@@ -28,8 +29,10 @@ namespace Vidly.Controllers
             //must use id as route param
             return Content(string.Format("id = {0}", id));
         }
+        #endregion
 
-        //nullable and optional params
+
+        #region ActionResult with nullable and optional params
         public ActionResult Index(int? pageIndex, string sortBy)
         {
             if (!pageIndex.HasValue)
@@ -40,5 +43,13 @@ namespace Vidly.Controllers
 
             return Content(string.Format("pageIndex = {0}, sortBy = {1}", pageIndex, sortBy));
         }
+        #endregion
+
+        #region GET: movies/released/{year}/{month} as defined in our custom MapRoute in RouteConfig
+        public ActionResult ByReleaseDate(int year, int month)
+        {
+            return Content(month + "/" + year);
+        }
+        #endregion
     }
 }
