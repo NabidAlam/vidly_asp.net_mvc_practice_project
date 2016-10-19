@@ -54,9 +54,9 @@ namespace Vidly.Controllers
         {
             return new List<Customer>
             {
-                new Customer { Id = 1, Name = "George Washington", Bio = "Bacon ipsum dolor amet andouille kielbasa strip steak pig. Chicken kevin ground round bresaola pork loin. Capicola beef salami, venison tenderloin turducken tail. T-bone pastrami burgdoggen, salami swine tail ham hock spare ribs venison pork loin tri-tip short loin shank brisket boudin. Hamburger pork turducken strip steak. Ham hock corned beef fatback, shankle pig tongue turducken pancetta. Ham hock meatloaf pig jerky kevin jowl alcatra capicola pork belly sausage salami ham turkey." },
-                new Customer { Id = 2, Name = "John Adams", Bio = "T-bone tri-tip sirloin, rump chuck shoulder bacon shank kevin cow shankle. Short loin prosciutto bresaola shankle ham hock jowl. Flank sausage rump kevin kielbasa, fatback spare ribs capicola boudin brisket chicken. Andouille tail prosciutto hamburger." },
-                new Customer { Id = 3, Name = "Thomas Jefferson", Bio = "Bacon ipsum dolor amet andouille kielbasa strip steak pig. Chicken kevin ground round bresaola pork loin. Capicola beef salami, venison tenderloin turducken tail. T-bone pastrami burgdoggen, salami swine tail ham hock spare ribs venison pork loin tri-tip short loin shank brisket boudin. Hamburger pork turducken strip steak. Ham hock corned beef fatback, shankle pig tongue turducken pancetta. Ham hock meatloaf pig jerky kevin jowl alcatra capicola pork belly sausage salami ham turkey." }
+                new Customer { Id = 1, Name = "George Washington" },
+                new Customer { Id = 2, Name = "John Adams" },
+                new Customer { Id = 3, Name = "Thomas Jefferson" }
             };
         }
     }

@@ -80,3 +80,7 @@ C:\Users\asiu\Desktop\Vidly\Vidly\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\asiu\Desktop\Vidly\Vidly\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.dll
 C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.pdb
+C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.InitialModel.resources
+C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.csproj.GenerateResource.Cache
+C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddIsSubscribedToCustomer.resources
+C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddMembershipType.resources
