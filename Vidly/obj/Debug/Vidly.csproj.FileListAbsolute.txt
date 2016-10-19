@@ -88,3 +88,4 @@ C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateMembershipT
 C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.ApplyAnnotationsToCustomerName.resources
 C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddMembershipType1.resources
 C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateMembershipTypeNames.resources
+C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.InitialModels.resources

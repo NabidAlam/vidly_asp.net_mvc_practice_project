@@ -45,7 +45,7 @@ namespace Vidly.Controllers
             });
             ******************/
 
-            var customer = _context.Customers.SingleOrDefault(c => c.Id == id); //get customer from database
+            var customer = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.Id == id); //get customer from database
 
             if (customer == null)
             {
