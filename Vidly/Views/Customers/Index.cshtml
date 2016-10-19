@@ -11,7 +11,7 @@
     <thead>
         <th>ID</th>
         <th>Name</th>
-        <th>Discount Rate</th>
+        <th>Membership Type</th>
     </thead>
     <tbody>
         @foreach (var person in Model)
@@ -19,7 +19,7 @@
             <tr>
                 <td>@person.Id</td>
                 <td>@Html.ActionLink(person.Name, "Details", "Customers", new { id = person.Id }, null)</td>
-                <td>@person.MembershipType.DiscountRate%</td>
+                <td>@person.MembershipType.Name</td>
             </tr>
         }
     </tbody>

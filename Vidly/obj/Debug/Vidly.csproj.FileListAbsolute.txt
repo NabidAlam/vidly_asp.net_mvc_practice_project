@@ -86,3 +86,5 @@ C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddIsSubscribedToCu
 C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddMembershipType.resources
 C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateMembershipTypes.resources
 C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.ApplyAnnotationsToCustomerName.resources
+C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddMembershipType1.resources
+C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateMembershipTypeNames.resources
