@@ -235,9 +235,26 @@
     <Compile Include="Migrations\201610192117460_InitialModels.Designer.cs">
       <DependentUpon>201610192117460_InitialModels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610192129308_CreateMovieTable.cs" />
+    <Compile Include="Migrations\201610192129308_CreateMovieTable.Designer.cs">
+      <DependentUpon>201610192129308_CreateMovieTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610192132245_CreateGenreTable.cs" />
+    <Compile Include="Migrations\201610192132245_CreateGenreTable.Designer.cs">
+      <DependentUpon>201610192132245_CreateGenreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610192133027_PopulateGenresTable.cs" />
+    <Compile Include="Migrations\201610192133027_PopulateGenresTable.Designer.cs">
+      <DependentUpon>201610192133027_PopulateGenresTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610192146163_CreateMovieTable1.cs" />
+    <Compile Include="Migrations\201610192146163_CreateMovieTable1.Designer.cs">
+      <DependentUpon>201610192146163_CreateMovieTable1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -312,6 +329,7 @@
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -348,6 +366,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610192117460_InitialModels.resx">
       <DependentUpon>201610192117460_InitialModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610192129308_CreateMovieTable.resx">
+      <DependentUpon>201610192129308_CreateMovieTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610192132245_CreateGenreTable.resx">
+      <DependentUpon>201610192132245_CreateGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610192133027_PopulateGenresTable.resx">
+      <DependentUpon>201610192133027_PopulateGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610192146163_CreateMovieTable1.resx">
+      <DependentUpon>201610192146163_CreateMovieTable1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

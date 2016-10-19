@@ -12,14 +12,18 @@
         <th>ID</th>
         <th>Title</th>
         <th>Duration</th>
+        <th>Genre</th>
+        <th>Number In Stock</th>
     </thead>
     <tbody>
         @foreach (var movie in Model)
         {
             <tr>
                 <td>@movie.Id</td>
-                <td>@movie.Name</td>
+                <td>@Html.ActionLink(movie.Name, "Details", "Movies", new { id = movie.Id }, null)</td>
                 <td>@movie.Duration hrs</td>
+                <td>@movie.Genre.Name</td>
+                <td>@movie.NumInStock</td>
             </tr>
         }
     </tbody>

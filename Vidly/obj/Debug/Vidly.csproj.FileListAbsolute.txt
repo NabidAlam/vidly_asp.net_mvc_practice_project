@@ -89,3 +89,7 @@ C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.ApplyAnnotationsToC
 C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddMembershipType1.resources
 C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateMembershipTypeNames.resources
 C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.InitialModels.resources
+C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.CreateMovieTable.resources
+C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.CreateGenreTable.resources
+C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateGenresTable.resources
+C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.CreateMovieTable1.resources
