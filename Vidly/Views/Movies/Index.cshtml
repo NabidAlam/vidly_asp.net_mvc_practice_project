@@ -13,7 +13,7 @@
         <th>Title</th>
         <th>Duration</th>
         <th>Genre</th>
-        <th>Number In Stock</th>
+        <th>In Stock?</th>
     </thead>
     <tbody>
         @foreach (var movie in Model)
@@ -23,7 +23,15 @@
                 <td>@Html.ActionLink(movie.Name, "Details", "Movies", new { id = movie.Id }, null)</td>
                 <td>@movie.Duration hrs</td>
                 <td>@movie.Genre.Name</td>
-                <td>@movie.NumInStock</td>
+                @if (movie.NumInStock > 0)
+                {
+                    <td>Yes</td>
+                }
+                else
+                {
+                    <td>No</td>
+                }
+
             </tr>
         }
     </tbody>
