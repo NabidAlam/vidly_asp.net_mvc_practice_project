@@ -36,9 +36,23 @@ namespace Vidly.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(Customer customer) //pass in a Customer object since all data in New view is prefixed by Customer
+        public ActionResult Save(Customer customer) //pass in a Customer object since all data in New view is prefixed by Customer
         {
-            _context.Customers.Add(customer);
+            if (customer.Id == 0)
+            {
+                _context.Customers.Add(customer);
+            }
+            else
+            {
+                //find the customer with that Id
+                var customerInDb = _context.Customers.Single(c => c.Id == customer.Id); //throw exception if customer is not found using Single()
+
+                customerInDb.Name = customer.Name;
+                customerInDb.BirthDate = customer.BirthDate;
+                customerInDb.MembershipTypeId = customer.MembershipTypeId;
+                customerInDb.IsSubscribedToNewsletter = customer.IsSubscribedToNewsletter;
+            }
+
             _context.SaveChanges();
 
             return RedirectToAction("Index", "Customers");
