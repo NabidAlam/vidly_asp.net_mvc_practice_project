@@ -7,6 +7,12 @@
 
 <h2>Movies</h2>
 
+<div>
+    <a href="Movies/New" class="btn btn-primary">New Customer</a>
+</div>
+
+<br />
+
 <table class="table table-bordered table-hover">
     <thead>
         <th>ID</th>
@@ -20,7 +26,7 @@
         {
             <tr>
                 <td>@movie.Id</td>
-                <td>@Html.ActionLink(movie.Name, "Details", "Movies", new { id = movie.Id }, null)</td>
+                <td>@Html.ActionLink(movie.Name, "Edit", "Movies", new { id = movie.Id }, null)</td>
                 <td>@movie.Duration hrs</td>
                 <td>@movie.Genre.Name</td>
                 @if (movie.NumInStock > 0)
@@ -29,7 +35,7 @@
                 }
                 else
                 {
-                    <td>No</td>
+                    <td style="color:#ff0000">No</td>
                 }
 
             </tr>

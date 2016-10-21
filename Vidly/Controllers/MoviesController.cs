@@ -80,6 +80,59 @@ namespace Vidly.Controllers
         //}
         #endregion
 
+        public ActionResult New()
+        {
+            var genres = _context.Genres.ToList();
+
+            var viewModel = new MovieFormViewModel
+            {
+                Genres = genres
+            };
+
+            return View("MovieForm", viewModel);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var movie = _context.Movies.SingleOrDefault(m => m.Id == id);
+
+
+            if (movie == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                var viewModel = new MovieFormViewModel
+                {
+                    Movie = movie,
+                    Genres = _context.Genres.ToList()
+                };
+                return View("MovieForm", viewModel); //specify the view you want to return
+            }
+        }
+
+        public ActionResult Save(Movie movie)
+        {
+            if(movie.Id == 0)
+            {
+                _context.Movies.Add(movie);
+            }
+            else
+            {
+                var movieInDb = _context.Movies.Single(mov => mov.Id == movie.Id);
+
+                movieInDb.Name = movie.Name;
+                movieInDb.Duration = movie.Duration;
+                movieInDb.GenreId = movie.GenreId;
+                movieInDb.NumInStock = movie.NumInStock;
+            }
+
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Movies");
+        }
+
 
         #region GET: movies/index
         public ActionResult Index()

@@ -58,14 +58,16 @@ namespace Vidly.Controllers
             return RedirectToAction("Index", "Customers");
         }
 
+
         public ActionResult Edit(int id)
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
 
-            if(customer == null)
+            if (customer == null)
             {
                 return HttpNotFound();
-            } else
+            }
+            else
             {
                 var viewModel = new CustomerFormViewModel
                 {
