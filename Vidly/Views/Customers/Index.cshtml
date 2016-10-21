@@ -7,21 +7,28 @@
 
 <h2>Customers</h2>
 
-<table class="table table-bordered table-hover">
-    <thead>
+<div>
+    <a href="Customers/New" class="btn btn-primary">New Customer</a>
+</div>
+
+<br />
+
+<div>
+    <table class="table table-bordered table-hover">
+        <thead>
         <th>ID</th>
         <th>Name</th>
         <th>Membership Type</th>
-    </thead>
-    <tbody>
-        @foreach (var person in Model)
-        {
-            <tr>
-                <td>@person.Id</td>
-                <td>@Html.ActionLink(person.Name, "Details", "Customers", new { id = person.Id }, null)</td>
-                <td>@person.MembershipType.Name</td>
-            </tr>
-        }
-    </tbody>
-</table>
-
+        </thead>
+        <tbody>
+            @foreach (var person in Model)
+            {
+                <tr>
+                    <td>@person.Id</td>
+                    <td>@Html.ActionLink(person.Name, "Details", "Customers", new { id = person.Id }, null)</td>
+                    <td>@person.MembershipType.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
