@@ -22,11 +22,19 @@ namespace Vidly.Controllers
             _context.Dispose();
         }
 
+        public ActionResult New()
+        {
+            return View();
+        }
+
+        #region
         //[Route("movies/released/{year:regex(\\d{4}):range(2012,2016)}/{month:regex(\\d{2}):range(1,12)}")] //attr route with constraints
 
-        //[Route("movies/details/{id}")]
+        //[Route("movies/details/{id}")] 
+        #endregion
         public ActionResult Details(int id)
         {
+            #region
             //SingleOrDefault -- Returns the only element of a sequence that satisfies a specified condition or a default value if no such element exists; this method throws an exception if more than one element satisfies the condition.
             //get customer by calling GetCustomers, which returns a List of customers
             //"filter" that result of GetCustomers and obtain the Customer type object whose Id equals the id param
@@ -43,7 +51,8 @@ namespace Vidly.Controllers
             {
                 return cust.Id == id;
             });
-            ******************/
+            ******************/ 
+            #endregion
 
             var customer = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.Id == id); //get customer from database
 
