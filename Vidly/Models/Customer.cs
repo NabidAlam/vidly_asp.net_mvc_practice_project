@@ -9,7 +9,7 @@ namespace Vidly.Models
     public class Customer
     {
         public int Id { get; set; }
-        [Required] //col no longer nullable
+        [Required(ErrorMessage ="Please enter customer's name")] //col no longer nullable and override default validation message
         [StringLength(255)] //specify max string length
         public string Name { get; set; }
 
@@ -17,8 +17,9 @@ namespace Vidly.Models
 
         public MembershipType MembershipType { get; set; }
 
+        [Required(ErrorMessage ="Please select a membership type")]
         [Display(Name = "Membership Type")]
-        public byte MembershipTypeId { get; set; }
+        public byte MembershipTypeId { get; set; } //MembershipTypeId is required by default because type is byte, not nullable byte (i.e., byte?)
 
         [Display(Name = "Date of Birth")]
         public string BirthDate { get; set; }
