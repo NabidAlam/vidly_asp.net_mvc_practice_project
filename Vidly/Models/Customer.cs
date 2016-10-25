@@ -22,6 +22,7 @@ namespace Vidly.Models
         public byte MembershipTypeId { get; set; } //MembershipTypeId is required by default because type is byte, not nullable byte (i.e., byte?)
 
         [Display(Name = "Date of Birth")]
+        [BirthDateRequiredIfMember]
         public string BirthDate { get; set; }
     }
 }

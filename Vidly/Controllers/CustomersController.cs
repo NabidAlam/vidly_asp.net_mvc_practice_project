@@ -29,6 +29,7 @@ namespace Vidly.Controllers
 
             var viewModel = new CustomerFormViewModel
             {
+                Customer = new Customer(), //init to default values
                 MembershipTypes = membershipTypes
             };
 
