@@ -10,19 +10,22 @@ namespace Vidly.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="Please specify the movie title")]
+        [Display(Name = "Title")]
         public string Name { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="Please specify how long the movie is in hours")]
         public double Duration { get; set; }
 
         public Genre Genre { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="Please select a genre")]
         [Display(Name = "Genre")]
         public int GenreId { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="Please specify stock amount")]
+        [Display(Name = "Number in Stock")]
+        [Range(1, 20, ErrorMessage ="Stock amount must be between 1 and 20, inclusive")]
         public int NumInStock { get; set; }
 
     }
