@@ -9,6 +9,7 @@ namespace Vidly.Models
     public class Customer
     {
         public int Id { get; set; }
+
         [Required(ErrorMessage ="Please enter customer's name")] //col no longer nullable and override default validation message
         [StringLength(255)] //specify max string length
         public string Name { get; set; }
