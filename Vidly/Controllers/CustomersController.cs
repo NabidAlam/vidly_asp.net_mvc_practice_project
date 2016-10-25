@@ -37,6 +37,7 @@ namespace Vidly.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer) //pass in a Customer object since all data in New view is prefixed by Customer
         {
             if (!ModelState.IsValid)
