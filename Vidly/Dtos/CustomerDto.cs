@@ -18,6 +18,7 @@ namespace Vidly.DTOs
 
         public byte MembershipTypeId { get; set; } //MembershipTypeId is required by default because type is byte, not nullable byte (i.e., byte?)
 
+        [BirthDateRequiredIfMember]
         public string BirthDate { get; set; }
     }
 }
