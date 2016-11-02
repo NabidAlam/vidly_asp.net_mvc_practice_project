@@ -81,3 +81,9 @@ C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.CreateMovieTable.re
 C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.CreateGenreTable.resources
 C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateGenresTable.resources
 C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.CreateMovieTable1.resources
+C:\Users\asiu\Desktop\Vidly\Vidly\bin\System.Net.Http.Formatting.dll
+C:\Users\asiu\Desktop\Vidly\Vidly\bin\System.Web.Http.dll
+C:\Users\asiu\Desktop\Vidly\Vidly\bin\System.Web.Http.WebHost.dll
+C:\Users\asiu\Desktop\Vidly\Vidly\bin\System.Net.Http.Formatting.xml
+C:\Users\asiu\Desktop\Vidly\Vidly\bin\System.Web.Http.xml
+C:\Users\asiu\Desktop\Vidly\Vidly\bin\System.Web.Http.WebHost.xml
