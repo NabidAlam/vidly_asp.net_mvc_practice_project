@@ -29,14 +29,17 @@
                 <td>@Html.ActionLink(movie.Name, "Edit", "Movies", new { id = movie.Id }, null)</td>
                 <td>@movie.Duration hrs</td>
                 <td>@movie.Genre.Name</td>
-                @if (movie.NumInStock > 0)
-                {
-                    <td>Yes</td>
-                }
-                else
-                {
-                    <td style="color:#ff0000;font-weight:bold"><i class="fa fa-warning"></i> NO</td>
-                }
+                <td>
+                    @movie.NumInStock
+                    @if (movie.NumInStock <= 2 && movie.NumInStock > 0)
+                    {
+                        <strong class="pull-right" style="color:#ffac00"><i class="fa fa-warning"></i> LOW!</strong>
+                    }
+                    else if (movie.NumInStock == 0)
+                    {
+                        <strong class="pull-right" style="color:#ff0000"><i class="fa fa-flag"></i> OUT OF STOCK!</strong>
+                    }
+                </td>
 
             </tr>
         }

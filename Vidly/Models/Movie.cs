@@ -25,7 +25,7 @@ namespace Vidly.Models
 
         [Required(ErrorMessage ="Please specify stock amount")]
         [Display(Name = "Number in Stock")]
-        [Range(1, 20, ErrorMessage ="Stock amount must be between 1 and 20, inclusive")]
+        [Range(0, 20, ErrorMessage ="Stock amount must be between 0 and 20, inclusive")]
         public int NumInStock { get; set; }
 
     }

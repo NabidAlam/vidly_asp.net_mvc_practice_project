@@ -18,13 +18,6 @@ C:\Users\asiu\Desktop\Vidly\Vidly\bin\Vidly.pdb
 C:\Users\asiu\Desktop\Vidly\Vidly\bin\Antlr3.Runtime.dll
 C:\Users\asiu\Desktop\Vidly\Vidly\bin\EntityFramework.dll
 C:\Users\asiu\Desktop\Vidly\Vidly\bin\EntityFramework.SqlServer.dll
-C:\Users\asiu\Desktop\Vidly\Vidly\bin\Microsoft.AI.Agent.Intercept.dll
-C:\Users\asiu\Desktop\Vidly\Vidly\bin\Microsoft.AI.DependencyCollector.dll
-C:\Users\asiu\Desktop\Vidly\Vidly\bin\Microsoft.AI.PerfCounterCollector.dll
-C:\Users\asiu\Desktop\Vidly\Vidly\bin\Microsoft.AI.ServerTelemetryChannel.dll
-C:\Users\asiu\Desktop\Vidly\Vidly\bin\Microsoft.AI.Web.dll
-C:\Users\asiu\Desktop\Vidly\Vidly\bin\Microsoft.AI.WindowsServer.dll
-C:\Users\asiu\Desktop\Vidly\Vidly\bin\Microsoft.ApplicationInsights.dll
 C:\Users\asiu\Desktop\Vidly\Vidly\bin\Microsoft.AspNet.Identity.Core.dll
 C:\Users\asiu\Desktop\Vidly\Vidly\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\asiu\Desktop\Vidly\Vidly\bin\Microsoft.AspNet.Identity.Owin.dll
@@ -49,11 +42,6 @@ C:\Users\asiu\Desktop\Vidly\Vidly\bin\System.Web.WebPages.Deployment.dll
 C:\Users\asiu\Desktop\Vidly\Vidly\bin\System.Web.WebPages.dll
 C:\Users\asiu\Desktop\Vidly\Vidly\bin\System.Web.WebPages.Razor.dll
 C:\Users\asiu\Desktop\Vidly\Vidly\bin\WebGrease.dll
-C:\Users\asiu\Desktop\Vidly\Vidly\bin\Microsoft.AI.DependencyCollector.xml
-C:\Users\asiu\Desktop\Vidly\Vidly\bin\Microsoft.AI.ServerTelemetryChannel.xml
-C:\Users\asiu\Desktop\Vidly\Vidly\bin\Microsoft.AI.Web.xml
-C:\Users\asiu\Desktop\Vidly\Vidly\bin\Microsoft.AI.WindowsServer.xml
-C:\Users\asiu\Desktop\Vidly\Vidly\bin\Microsoft.ApplicationInsights.xml
 C:\Users\asiu\Desktop\Vidly\Vidly\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\asiu\Desktop\Vidly\Vidly\bin\System.Web.Helpers.xml
 C:\Users\asiu\Desktop\Vidly\Vidly\bin\System.Web.Mvc.xml
