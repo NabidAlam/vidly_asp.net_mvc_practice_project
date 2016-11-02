@@ -76,7 +76,7 @@ namespace Vidly.Controllers.Api
                 {
                     Mapper.Map(customerDto, customerInDb);
 
-                    _context.SaveChanges(); //test comment for test commit
+                    _context.SaveChanges(); 
                 }
             }
         }
