@@ -16,6 +16,7 @@ namespace Vidly.App_Start
             // map a Customer to a CustomerDto and vice versa using the property names
             Mapper.CreateMap<Customer, CustomerDto>();
             Mapper.CreateMap<CustomerDto, Customer>();
+            Mapper.CreateMap<MembershipType, MembershipTypeDto>();
 
             Mapper.CreateMap<Movie, MovieDto>();
             Mapper.CreateMap<MovieDto, Movie>();

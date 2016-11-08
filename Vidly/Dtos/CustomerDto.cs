@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using Vidly.Dtos;
 using Vidly.Models;
 
 namespace Vidly.DTOs
@@ -17,6 +18,8 @@ namespace Vidly.DTOs
         public bool IsSubscribedToNewsletter { get; set; }
 
         public byte MembershipTypeId { get; set; } //MembershipTypeId is required by default because type is byte, not nullable byte (i.e., byte?)
+
+        public MembershipTypeDto MembershipType { get; set; }
 
         //[BirthDateRequiredIfMember]
         public string BirthDate { get; set; }
