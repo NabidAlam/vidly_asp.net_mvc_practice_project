@@ -16,23 +16,13 @@
 <div>
     <table id="customers" class="table table-bordered table-hover">
         <thead>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Membership Type</th>
-        <th>Delete</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Membership Type</th>
+            <th>Delete</th>
         </thead>
         <tbody>
-            @foreach (var person in Model)
-            {
-                <tr>
-                    <td>@person.Id</td>
-                    <td>@Html.ActionLink(person.Name, "Edit", "Customers", new { id = person.Id }, null)</td>
-                    <td>@person.MembershipType.Name</td>
-                    <td>
-                        <button class="js-delete btn btn-danger btn-sm" data-customer-id="@person.Id"><i class="fa fa-times"></i></button>
-                    </td>
-                </tr>
-            }
+            
         </tbody>
     </table>
 </div>
@@ -41,7 +31,35 @@
 {
     <script>
         $(document).ready(function () {
-            $('#customers').DataTable();
+            $('#customers').DataTable({
+                ajax: {
+                    url: "/api/customers/",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "id",
+                        render: function(data) {
+                            return data;
+                        }
+                    },
+                    {
+                        data: "name",
+                        render: function (data, type, customer) {
+                            return "<a href='/customers/edit/" + customer.id + "'>" + customer.name + "</a>";
+                        }
+                    },
+                    {
+                        data: "name"
+                    },
+                    {
+                        data: "id",
+                        render: function (data) {
+                            return "<button class='btn btn-danger btn-sm js-delete' data-customer-id=" + data + "><i class='fa fa-times'></i></button>"
+                        }
+                    }
+                ]
+            });
 
             $('#customers').on('click', '.js-delete', function () {
                 var self = $(this);

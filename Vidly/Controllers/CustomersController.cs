@@ -132,9 +132,11 @@ namespace Vidly.Controllers
         public ActionResult Index()
         {
             //var customers = GetCustomers();
-            var customers = _context.Customers.Include(c => c.MembershipType).ToList(); //get customers from table
+            //no longer need to get the list of customers here because we are returning json objs on the client side
+            //and using jquery datatables to style
+            //var customers = _context.Customers.Include(c => c.MembershipType).ToList(); //get customers from table
 
-            return View(customers);
+            return View(/*customers*/);
         }
 
         #region Hard-coded data
