@@ -13,36 +13,84 @@
 
 <br />
 
-<table class="table table-bordered table-hover">
+<table id="movies" class="table table-bordered table-hover">
     <thead>
-        <th>ID</th>
-        <th>Title</th>
-        <th>Duration</th>
-        <th>Genre</th>
-        <th>In Stock?</th>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Duration</th>
+            <th>Genre</th>
+            <th>In Stock?</th>
+            <th>Delete</th>
+        </tr>
     </thead>
     <tbody>
-        @foreach (var movie in Model)
-        {
-            <tr>
-                <td>@movie.Id</td>
-                <td>@Html.ActionLink(movie.Name, "Edit", "Movies", new { id = movie.Id }, null)</td>
-                <td>@movie.Duration hrs</td>
-                <td>@movie.Genre.Name</td>
-                <td>
-                    @movie.NumInStock
-                    @if (movie.NumInStock <= 2 && movie.NumInStock > 0)
-                    {
-                        <strong class="pull-right" style="color:#ffac00"><i class="fa fa-warning"></i> LOW!</strong>
-                    }
-                    else if (movie.NumInStock == 0)
-                    {
-                        <strong class="pull-right" style="color:#ff0000"><i class="fa fa-flag"></i> OUT OF STOCK!</strong>
-                    }
-                </td>
-
-            </tr>
-        }
+        
     </tbody>
 </table>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            var table = $('#movies').DataTable({
+                ajax: {
+                    url: "/api/movies/",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "id",
+                        render: function (data) {
+                            return data;
+                        }
+                    },
+                    {
+                        data: "name",
+                        render: function (data, type, movie) {
+                            return "<a href='/movies/edit/" + movie.id + "'>" + movie.name + "</a>";
+                        }
+                    },
+                    {
+                        data: "duration",
+                        render: function (data) {
+                            return data;
+                        }
+                    },
+                    {
+                        data: "genre.name"
+                    },
+                    {
+                        data: "numInStock",
+                        render: function(data) {
+                            return data;
+                        }
+                    },
+                    {
+                        data: "id",
+                        render: function(data) {
+                            return "<button class='btn btn-danger btn-sm js-delete' data-movie-id=" + data + "><i class='fa fa-times'></i></button>";
+                        }
+                    }
+                ]
+            });
+
+            $('#movies').on('click', '.js-delete', function () {
+                var self = $(this);
+
+                bootbox.confirm('Are you sure you want to delete this movie?', function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: '/api/movies/' + self.attr('data-movie-id'),
+                            method: 'DELETE',
+                            success: function () {
+                                table.row(self.parents('tr')).remove().draw();
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>    
+}
 

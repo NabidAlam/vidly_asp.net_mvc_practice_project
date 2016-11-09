@@ -81,9 +81,9 @@ namespace Vidly.Controllers
         #region GET: movies/index
         public ActionResult Index()
         {
-            var movies = _context.Movies.Include(m => m.Genre).ToList();
+            //var movies = _context.Movies.Include(m => m.Genre).ToList();
 
-            return View(movies);
+            return View(/*movies*/);
         }
         #endregion
 

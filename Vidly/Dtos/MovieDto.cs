@@ -19,6 +19,8 @@ namespace Vidly.Dtos
         [Required]
         public int GenreId { get; set; }
 
+        public GenreDto Genre { get; set; }
+
         [Required]
         [Range(0, 20, ErrorMessage = "Stock amount must be between 0 and 20, inclusive")]
         public int NumInStock { get; set; }
