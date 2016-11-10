@@ -23,6 +23,7 @@ namespace Vidly.Controllers
             _context.Dispose();
         }
 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult New()
         {
             var membershipTypes = _context.MembershipTypes.ToList();
@@ -69,7 +70,7 @@ namespace Vidly.Controllers
             return RedirectToAction("Index", "Customers");
         }
 
-
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Edit(int id)
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
@@ -136,7 +137,9 @@ namespace Vidly.Controllers
             //and using jquery datatables to style
             //var customers = _context.Customers.Include(c => c.MembershipType).ToList(); //get customers from table
 
-            return View(/*customers*/);
+            if (User.IsInRole(RoleName.CanManageMovies))
+                return View("List");
+            return View("ReadOnlyList");
         }
 
         #region Hard-coded data
