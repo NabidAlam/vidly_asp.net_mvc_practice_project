@@ -88,3 +88,4 @@ C:\Users\asiu\Desktop\Vidly\Vidly\bin\System.Web.Http.xml
 C:\Users\asiu\Desktop\Vidly\Vidly\bin\System.Web.Http.WebHost.xml
 C:\Users\asiu\Desktop\Vidly\Vidly\bin\AutoMapper.dll
 C:\Users\asiu\Desktop\Vidly\Vidly\bin\AutoMapper.xml
+C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.csprojResolveAssemblyReference.cache
