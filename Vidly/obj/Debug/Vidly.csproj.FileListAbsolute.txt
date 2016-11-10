@@ -90,3 +90,4 @@ C:\Users\asiu\Desktop\Vidly\Vidly\bin\AutoMapper.dll
 C:\Users\asiu\Desktop\Vidly\Vidly\bin\AutoMapper.xml
 C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.csprojResolveAssemblyReference.cache
 C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.SeedUsers.resources
+C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddDrivingLicenseToApplicationUser.resources
