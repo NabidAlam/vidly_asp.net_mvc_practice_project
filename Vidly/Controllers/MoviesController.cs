@@ -85,6 +85,14 @@ namespace Vidly.Controllers
         {
             //var movies = _context.Movies.Include(m => m.Genre).ToList();
 
+            //data caching of genres
+            //if(MemoryCache.Default["Genres"] == null)
+            //{
+            //    MemoryCache.Default["Genres"] = _context.Genres.ToList();
+            //}
+
+            //var genres = MemoryCache.Default["Genres"] as IEnumerable<Genre>;
+
             if (User.IsInRole(RoleName.CanManageMovies))
                 return View("List");
             return View("ReadOnlyList");

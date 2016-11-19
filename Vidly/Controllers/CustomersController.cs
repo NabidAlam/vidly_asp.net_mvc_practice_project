@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Runtime.Caching;
 using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
@@ -136,6 +137,8 @@ namespace Vidly.Controllers
             //no longer need to get the list of customers here because we are returning json objs on the client side
             //and using jquery datatables to style
             //var customers = _context.Customers.Include(c => c.MembershipType).ToList(); //get customers from table
+
+            
 
             if (User.IsInRole(RoleName.CanManageMovies))
                 return View("List");

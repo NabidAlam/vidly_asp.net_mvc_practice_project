@@ -10,6 +10,8 @@ namespace Vidly.Controllers
     [AllowAnonymous]
     public class HomeController : Controller
     {
+        //set duration to 0 disable output caching, e.g.:
+        //[OutputCache(Duration =0, VaryByParam = "*", NoStore = true)]
         //[OutputCache(Duration = 50, Location = OutputCacheLocation.Server, VaryByParam = "*")]
         public ActionResult Index()
         {
