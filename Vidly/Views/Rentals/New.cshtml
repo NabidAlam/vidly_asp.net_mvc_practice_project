@@ -106,7 +106,9 @@
                         //clear form
                         $("#customer").typeahead("val", "");
                         $("#movie").typeahead("val", "");
-                        $("#movies").html("");
+                        $("#movies").empty();
+
+                        vm = { movieIds: [] };
                     })
                     .fail(function () {
                         toastr.error("There was an error");
