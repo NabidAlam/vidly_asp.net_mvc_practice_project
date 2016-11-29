@@ -9,13 +9,13 @@
     <div class="form-group">
         <label>Customer</label>
         <div class="tt-container">
-            <input type="text" value="" class="form-control" id="customer" data-rule-validCustomer="true" required/>
+            <input type="text" value="" name="customer" class="form-control" id="customer" data-rule-validCustomer="true" required/>
         </div>
     </div>
     <div class="form-group">
         <label>Movie</label>
         <div class="tt-container">
-            <input type="text" value="" class="form-control" id="movie" data-rule-validMovie="true"/>
+            <input type="text" value="" name="movie" class="form-control" id="movie" data-rule-atLeastOneMovie="true"/>
         </div>
 
         <div class="row">
@@ -90,13 +90,12 @@
                 return vm.customerId && vm.customerId !== 0;
             }, "Please select a valid customer");
 
-            $.validator.addMethod("validMovie", function () {
-                return vm.movieId && vm.movieId !== 0;
-            }, "Please select a valid movie");
+            $.validator.addMethod("atLeastOneMovie", function () {
+                return vm.movieIds.length > 0;
+            }, "Please select at least one movie");
 
             $("#newRental").validate({
                 submitHandler: function () {
-                    e.preventDefault();
                     $.ajax({
                         url: "/api/newRentals",
                         method: "post",
@@ -104,10 +103,16 @@
                     })
                     .done(function () {
                         toastr.success("Rentals successfully recorded.");
+                        //clear form
+                        $("#customer").typeahead("val", "");
+                        $("#movie").typeahead("val", "");
+                        $("#movies").html("");
                     })
                     .fail(function () {
                         toastr.error("There was an error");
                     });
+
+                    return false;
                 }
             });
         });
