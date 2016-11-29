@@ -283,6 +283,14 @@
     <Compile Include="Migrations\201611102044221_AddPhoneNumberToApplicationUser.Designer.cs">
       <DependentUpon>201611102044221_AddPhoneNumberToApplicationUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611290401410_CreateRentalsTable.cs" />
+    <Compile Include="Migrations\201611290401410_CreateRentalsTable.Designer.cs">
+      <DependentUpon>201611290401410_CreateRentalsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611290417512_AddNumberAvailableToMovies.cs" />
+    <Compile Include="Migrations\201611290417512_AddNumberAvailableToMovies.Designer.cs">
+      <DependentUpon>201611290417512_AddNumberAvailableToMovies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BirthDateRequiredIfMember.cs" />
@@ -292,6 +300,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\Rental.cs" />
     <Compile Include="Models\RoleName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -602,6 +611,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611102044221_AddPhoneNumberToApplicationUser.resx">
       <DependentUpon>201611102044221_AddPhoneNumberToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611290401410_CreateRentalsTable.resx">
+      <DependentUpon>201611290401410_CreateRentalsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611290417512_AddNumberAvailableToMovies.resx">
+      <DependentUpon>201611290417512_AddNumberAvailableToMovies.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

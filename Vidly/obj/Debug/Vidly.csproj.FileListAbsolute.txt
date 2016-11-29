@@ -97,3 +97,5 @@ C:\Users\asiu\Desktop\Vidly\Vidly\bin\Glimpse.AspNet.dll
 C:\Users\asiu\Desktop\Vidly\Vidly\bin\Glimpse.Core.dll
 C:\Users\asiu\Desktop\Vidly\Vidly\bin\Glimpse.EF6.dll
 C:\Users\asiu\Desktop\Vidly\Vidly\bin\Glimpse.Mvc5.dll
+C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.CreateRentalsTable.resources
+C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddNumberAvailableToMovies.resources
