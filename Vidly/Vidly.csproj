@@ -224,73 +224,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201610190355079_InitialModel.cs" />
-    <Compile Include="Migrations\201610190355079_InitialModel.Designer.cs">
-      <DependentUpon>201610190355079_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\201612081652416_init.cs" />
+    <Compile Include="Migrations\201612081652416_init.Designer.cs">
+      <DependentUpon>201612081652416_init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201610190419514_AddIsSubscribedToCustomer.cs" />
-    <Compile Include="Migrations\201610190419514_AddIsSubscribedToCustomer.Designer.cs">
-      <DependentUpon>201610190419514_AddIsSubscribedToCustomer.cs</DependentUpon>
+    <Compile Include="Migrations\201612081835004_DeleteNumberAvailableFromMovies.cs" />
+    <Compile Include="Migrations\201612081835004_DeleteNumberAvailableFromMovies.Designer.cs">
+      <DependentUpon>201612081835004_DeleteNumberAvailableFromMovies.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201610190430192_AddMembershipType.cs" />
-    <Compile Include="Migrations\201610190430192_AddMembershipType.Designer.cs">
-      <DependentUpon>201610190430192_AddMembershipType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610191953550_PopulateMembershipTypes.cs" />
-    <Compile Include="Migrations\201610191953550_PopulateMembershipTypes.Designer.cs">
-      <DependentUpon>201610191953550_PopulateMembershipTypes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610192010471_ApplyAnnotationsToCustomerName.cs" />
-    <Compile Include="Migrations\201610192010471_ApplyAnnotationsToCustomerName.Designer.cs">
-      <DependentUpon>201610192010471_ApplyAnnotationsToCustomerName.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610192056283_AddMembershipType1.cs" />
-    <Compile Include="Migrations\201610192056283_AddMembershipType1.Designer.cs">
-      <DependentUpon>201610192056283_AddMembershipType1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610192057577_PopulateMembershipTypeNames.cs" />
-    <Compile Include="Migrations\201610192057577_PopulateMembershipTypeNames.Designer.cs">
-      <DependentUpon>201610192057577_PopulateMembershipTypeNames.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610192117460_InitialModels.cs" />
-    <Compile Include="Migrations\201610192117460_InitialModels.Designer.cs">
-      <DependentUpon>201610192117460_InitialModels.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610192129308_CreateMovieTable.cs" />
-    <Compile Include="Migrations\201610192129308_CreateMovieTable.Designer.cs">
-      <DependentUpon>201610192129308_CreateMovieTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610192132245_CreateGenreTable.cs" />
-    <Compile Include="Migrations\201610192132245_CreateGenreTable.Designer.cs">
-      <DependentUpon>201610192132245_CreateGenreTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610192133027_PopulateGenresTable.cs" />
-    <Compile Include="Migrations\201610192133027_PopulateGenresTable.Designer.cs">
-      <DependentUpon>201610192133027_PopulateGenresTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610192146163_CreateMovieTable1.cs" />
-    <Compile Include="Migrations\201610192146163_CreateMovieTable1.Designer.cs">
-      <DependentUpon>201610192146163_CreateMovieTable1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611101712094_SeedUsers.cs" />
-    <Compile Include="Migrations\201611101712094_SeedUsers.Designer.cs">
-      <DependentUpon>201611101712094_SeedUsers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611101751514_AddDrivingLicenseToApplicationUser.cs" />
-    <Compile Include="Migrations\201611101751514_AddDrivingLicenseToApplicationUser.Designer.cs">
-      <DependentUpon>201611101751514_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611102044221_AddPhoneNumberToApplicationUser.cs" />
-    <Compile Include="Migrations\201611102044221_AddPhoneNumberToApplicationUser.Designer.cs">
-      <DependentUpon>201611102044221_AddPhoneNumberToApplicationUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611290401410_CreateRentalsTable.cs" />
-    <Compile Include="Migrations\201611290401410_CreateRentalsTable.Designer.cs">
-      <DependentUpon>201611290401410_CreateRentalsTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611290417512_AddNumberAvailableToMovies.cs" />
-    <Compile Include="Migrations\201611290417512_AddNumberAvailableToMovies.Designer.cs">
-      <DependentUpon>201611290417512_AddNumberAvailableToMovies.cs</DependentUpon>
+    <Compile Include="Migrations\201612081836502_AddNumberAvailableToMovies.cs" />
+    <Compile Include="Migrations\201612081836502_AddNumberAvailableToMovies.Designer.cs">
+      <DependentUpon>201612081836502_AddNumberAvailableToMovies.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -312,6 +256,10 @@
     <Compile Include="ViewModels\RegisterViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-Vidly-20161017092845.mdf" />
+    <Content Include="App_Data\aspnet-Vidly-20161017092845_log.ldf">
+      <DependentUpon>aspnet-Vidly-20161017092845.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-lumen.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -442,6 +390,7 @@
     <Content Include="Content\DataTables\css\common.scss" />
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
+    <None Include="Properties\PublishProfiles\WebProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />
@@ -571,7 +520,15 @@
     <Content Include="Views\Rentals\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <EmbeddedResource Include="Migrations\201612081652416_init.resx">
+      <DependentUpon>201612081652416_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612081835004_DeleteNumberAvailableFromMovies.resx">
+      <DependentUpon>201612081835004_DeleteNumberAvailableFromMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612081836502_AddNumberAvailableToMovies.resx">
+      <DependentUpon>201612081836502_AddNumberAvailableToMovies.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -580,59 +537,6 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201610190355079_InitialModel.resx">
-      <DependentUpon>201610190355079_InitialModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610190419514_AddIsSubscribedToCustomer.resx">
-      <DependentUpon>201610190419514_AddIsSubscribedToCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610190430192_AddMembershipType.resx">
-      <DependentUpon>201610190430192_AddMembershipType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610191953550_PopulateMembershipTypes.resx">
-      <DependentUpon>201610191953550_PopulateMembershipTypes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610192010471_ApplyAnnotationsToCustomerName.resx">
-      <DependentUpon>201610192010471_ApplyAnnotationsToCustomerName.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610192056283_AddMembershipType1.resx">
-      <DependentUpon>201610192056283_AddMembershipType1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610192057577_PopulateMembershipTypeNames.resx">
-      <DependentUpon>201610192057577_PopulateMembershipTypeNames.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610192117460_InitialModels.resx">
-      <DependentUpon>201610192117460_InitialModels.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610192129308_CreateMovieTable.resx">
-      <DependentUpon>201610192129308_CreateMovieTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610192132245_CreateGenreTable.resx">
-      <DependentUpon>201610192132245_CreateGenreTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610192133027_PopulateGenresTable.resx">
-      <DependentUpon>201610192133027_PopulateGenresTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610192146163_CreateMovieTable1.resx">
-      <DependentUpon>201610192146163_CreateMovieTable1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611101712094_SeedUsers.resx">
-      <DependentUpon>201611101712094_SeedUsers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611101751514_AddDrivingLicenseToApplicationUser.resx">
-      <DependentUpon>201611101751514_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611102044221_AddPhoneNumberToApplicationUser.resx">
-      <DependentUpon>201611102044221_AddPhoneNumberToApplicationUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611290401410_CreateRentalsTable.resx">
-      <DependentUpon>201611290401410_CreateRentalsTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611290417512_AddNumberAvailableToMovies.resx">
-      <DependentUpon>201611290417512_AddNumberAvailableToMovies.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

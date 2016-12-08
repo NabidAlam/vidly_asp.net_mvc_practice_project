@@ -24,5 +24,7 @@ namespace Vidly.Dtos
         [Required]
         [Range(0, 20, ErrorMessage = "Stock amount must be between 0 and 20, inclusive")]
         public int NumInStock { get; set; }
+
+        public int NumberAvailable { get; set; }
     }
 }

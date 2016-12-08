@@ -21,6 +21,7 @@
             <th>Duration</th>
             <th>Genre</th>
             <th>In Stock?</th>
+            <th>Number Available</th>
             <th>Delete</th>
         </tr>
     </thead>
@@ -62,6 +63,12 @@
                     },
                     {
                         data: "numInStock",
+                        render: function(data) {
+                            return data;
+                        }
+                    },
+                    {
+                        data: "numberAvailable",
                         render: function(data) {
                             return data;
                         }

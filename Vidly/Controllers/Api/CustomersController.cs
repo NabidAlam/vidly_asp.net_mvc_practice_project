@@ -26,7 +26,7 @@ namespace Vidly.Controllers.Api
                 _context.Customers
                 .Include(c => c.MembershipType);
 
-            if(!String.IsNullOrWhiteSpace(query))
+            if (!String.IsNullOrWhiteSpace(query))
             {
                 customersQuery = customersQuery.Where(c => c.Name.Contains(query));
             }
@@ -45,7 +45,8 @@ namespace Vidly.Controllers.Api
             if (customer == null)
             {
                 return NotFound();
-            } else
+            }
+            else
             {
                 return Ok(Mapper.Map<Customer, CustomerDto>(customer));
             }
@@ -59,7 +60,8 @@ namespace Vidly.Controllers.Api
             if (!ModelState.IsValid)
             {
                 return BadRequest();
-            } else
+            }
+            else
             {
                 var customer = Mapper.Map<CustomerDto, Customer>(customerDto);
 
@@ -85,14 +87,15 @@ namespace Vidly.Controllers.Api
             {
                 var customerInDb = _context.Customers.SingleOrDefault(c => c.Id == id);
 
-                if(customerInDb == null)
+                if (customerInDb == null)
                 {
                     throw new HttpResponseException(HttpStatusCode.NotFound);
-                } else
+                }
+                else
                 {
                     Mapper.Map(customerDto, customerInDb);
 
-                    _context.SaveChanges(); 
+                    _context.SaveChanges();
                 }
             }
         }
@@ -107,7 +110,8 @@ namespace Vidly.Controllers.Api
             if (customerInDb == null)
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
-            } else
+            }
+            else
             {
                 _context.Customers.Remove(customerInDb);
                 _context.SaveChanges();

@@ -26,7 +26,7 @@ namespace Vidly.Controllers.Api
 
             foreach (var movie in movies)
             {
-                if(movie.NumberAvailable == 0)
+                if (movie.NumberAvailable == 0)
                 {
                     return BadRequest("One or more movies are not available");
                 }
