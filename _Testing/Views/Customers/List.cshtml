@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Vidly.Models.Customer>
+
+@{
+    ViewBag.Title = "Customers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customers</h2>
+
+<div>
+    <a href="Customers/New" class="btn btn-primary">New Customer</a>
+</div>
+
+<br />
+
+<div>
+    <table id="customers" class="table table-bordered table-hover">
+        <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Membership Type</th>
+            <th>Delete</th>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+</div>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            var table = $('#customers').DataTable({
+                ajax: {
+                    url: "/api/customers/",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "id",
+                        render: function(data) {
+                            return data;
+                        }
+                    },
+                    {
+                        data: "name",
+                        render: function (data, type, customer) {
+                            return "<a href='/customers/edit/" + customer.id + "'>" + customer.name + "</a>";
+                        }
+                    },
+                    {
+                        data: "membershipType.name"
+                    },
+                    {
+                        data: "id",
+                        render: function (data) {
+                            return "<button class='btn btn-danger btn-sm js-delete' data-customer-id=" + data + "><i class='fa fa-times'></i></button>"
+                        }
+                    }
+                ]
+            });
+
+            $('#customers').on('click', '.js-delete', function () {
+                var self = $(this);
+
+                bootbox.confirm('Are you sure you want to delete this customer?', function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "/api/customers/" + self.attr('data-customer-id'),
+                            method: 'DELETE',
+                            success: function () {
+                                //remove customer from datatable and view
+                                table.row(self.parents('tr')).remove().draw();
+                                
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+}

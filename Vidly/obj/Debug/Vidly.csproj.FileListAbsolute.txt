@@ -85,3 +85,4 @@ C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.init.resources
 C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.csproj.GenerateResource.Cache
 C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.DeleteNumberAvailableFromMovies.resources
 C:\Users\asiu\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddNumberAvailableToMovies.resources
+C:\Users\asiu\Desktop\Vidly\Vidly\bin\Elmah.dll

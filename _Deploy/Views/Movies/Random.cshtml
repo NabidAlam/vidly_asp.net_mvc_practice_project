@@ -1,0 +1,54 @@
+﻿@*@model Vidly.Models.Movie*@
+@model Vidly.ViewModels.RandomMovieViewModel
+@{
+    ViewBag.Title = "Random";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    var className = Model.Customers.Count > 0 ? "text-center" : null;
+}
+
+@*Add text-center class only if customer count > 0*@
+
+<h2 class="@className">Movie Name: @Model.Movie.Name</h2>
+
+<h3>ID: #@Model.Movie.Id</h3>
+
+<h3>Duration: @Model.Movie.Duration hrs</h3>
+
+<h4>Customer List</h4>
+@if (Model.Customers.Count == 0)
+{
+    <text>No one has rented this movie before.</text>
+}
+else
+{
+    <ul>
+        @foreach (var customer in Model.Customers)
+        {
+            <li>@customer.Name</li>
+        }
+    </ul>
+}
+
+<h4>Synopsis</h4>
+
+
+<div class="container">
+    <p>
+        Bacon ipsum dolor amet short loin shank leberkas jerky ribeye landjaeger rump. Shoulder biltong tongue pig ground round. Beef ribs beef ribeye strip steak tri-tip rump drumstick sausage bresaola. Turkey flank venison tenderloin fatback pork belly turducken swine strip steak pork tail tongue hamburger. Spare ribs bresaola fatback, andouille short ribs salami swine pork chop jerky tri-tip frankfurter kevin pig kielbasa. Corned beef jerky swine shoulder andouille, ribeye ham hock turducken salami rump picanha bresaola.
+    </p>
+    <p>
+        Sausage rump biltong pork loin, pork chop flank porchetta tri-tip pancetta filet mignon sirloin brisket prosciutto. Landjaeger sirloin rump porchetta turducken, ribeye ball tip. Ham hock prosciutto kielbasa tongue hamburger kevin bresaola ground round flank meatloaf. Pig ham hock cupim sirloin turducken ground round tri-tip andouille. Drumstick leberkas tail ham bacon boudin. Turducken hamburger corned beef beef ribs kielbasa landjaeger.
+    </p>
+    <p>
+        Kevin rump bresaola pancetta picanha salami. Bresaola meatloaf short ribs prosciutto tenderloin. Pancetta andouille kevin ribeye meatball. Pork jowl ham, brisket frankfurter shoulder kevin pastrami bacon hamburger biltong.
+    </p>
+    <p>
+        Ribeye jowl rump, capicola flank cupim boudin turkey beef ribs cow ham andouille chuck hamburger meatball. Burgdoggen sausage pork loin chicken cupim short loin beef ribs pancetta fatback cow tenderloin shank pastrami jerky. Ribeye shoulder jowl tenderloin alcatra pork belly rump meatball pork short ribs bresaola picanha. Alcatra meatball shank pastrami pork belly beef burgdoggen pork loin sausage brisket swine short ribs. Salami hamburger corned beef alcatra porchetta pastrami ham hock doner ribeye bacon pancetta. Landjaeger brisket filet mignon, leberkas venison jowl spare ribs tenderloin.
+    </p>
+    <p>
+        Pork loin shoulder shankle bacon. Fatback burgdoggen spare ribs, meatball capicola chuck corned beef cupim pig flank short loin. Tongue meatball t-bone biltong, tri-tip ribeye tail. Picanha frankfurter kielbasa, filet mignon porchetta pancetta alcatra jowl beef ribs flank. Hamburger spare ribs shank pork loin salami.
+    </p>
+</div>
